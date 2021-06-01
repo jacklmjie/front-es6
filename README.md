@@ -9,34 +9,35 @@ const 常量,一但声明必须初始化,声明之后不允许改变
 ```
 - 2、解构表达式
 ```
-//数组解构
+//1）数组解构
 let arr = [1,2,3];
 let [a,b,c] = arr;
 console.log(a,b,c)
 
-//对象解构
+//2）对象解构
 const person = {
-            name: "jack",
-            age: 21,
-            language: ['java', 'js', 'css']
-        }
-//name赋值给了abc
+   name: "jack",
+   age: 21,
+   language: ['java', 'js', 'css']
+}
+
+//3）name赋值给了abc
 const { name: abc, age, language } = person;
 console.log(abc, age, language)
 
-//字符串扩展
+//4）字符串扩展
 let str = "hello.vue";
 console.log(str.startsWith("hello"));//true
 console.log(str.endsWith(".vue"));//true
 console.log(str.includes("e"));//true
 
-//字符串模板,``不是单引号，是~这个
+//5）字符串模板,``不是单引号，是~这个
 let ss = `<div>
                     <span>hello world<span>
                 </div>`;
 console.log(ss);
 
-//字符串插入变量和表达式。变量名写在 ${} 中，${} 中可以放入 JavaScript 表达式
+//6）字符串插入变量和表达式。变量名写在 ${} 中，${} 中可以放入 JavaScript 表达式
 let info = `我是${abc}，今年${age + 10}了, 我想说： ${fun()}`;
 ```
 - 3、函数优化
@@ -62,7 +63,7 @@ let info = `我是${abc}，今年${age + 10}了, 我想说： ${fun()}`;
 ```
 - 4、对象优化
 ```
-const person = {
+        const person = {
             name: "jack",
             age: 21,
             language: ['java', 'js', 'css']
@@ -73,8 +74,8 @@ const person = {
         console.log(Object.values(person));//["jack", 21, Array(3)]
         console.log(Object.entries(person));//[Array(2), Array(2), Array(2)]
 
-//合并对象
-const target = { a: 1 };
+//1）合并对象
+        const target = { a: 1 };
         const source1 = { b: 2 };
         const source2 = { c: 3 };
 
